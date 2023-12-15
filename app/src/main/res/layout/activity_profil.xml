@@ -1,0 +1,74 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="16dp"
+        android:src="@drawable/back"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bookedCarTitle"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/bookedCarImage"
+            android:text="name"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/bookedCarBrand"
+            android:layout_width="246dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/bookedCarTitle"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="-9dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/bookedCarImage"
+            android:maxLines="1"
+            android:text="brand"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bookedCarImage"
+            android:layout_width="103dp"
+            android:layout_height="86dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgupload"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
